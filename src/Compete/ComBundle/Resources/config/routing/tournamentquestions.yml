@@ -1,0 +1,39 @@
+tournamentquestions:
+    pattern:  /
+    defaults: { _controller: "CompeteComBundle:TournamentQuestions:index" }
+
+tournamentquestions_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "CompeteComBundle:TournamentQuestions:show" }
+
+tournamentquestions_new:
+    pattern:  /new
+    defaults: { _controller: "CompeteComBundle:TournamentQuestions:new" }
+
+tournamentquestions_create:
+    pattern:  /create
+    defaults: { _controller: "CompeteComBundle:TournamentQuestions:create" }
+    requirements: { _method: post }
+
+tournamentquestions_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "CompeteComBundle:TournamentQuestions:edit" }
+
+tournamentquestions_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "CompeteComBundle:TournamentQuestions:update" }
+    requirements: { _method: post|put }
+
+tournamentquestions_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "CompeteComBundle:TournamentQuestions:delete" }
+    requirements: { _method: post|delete }
+tournamentquestions_unapproved:
+   pattern: /listunapproved
+   defaults: { _controller: "CompeteComBundle:TournamentQuestions:listunapproved" }
+tournamentquestions_approve:
+    pattern: /{id}/approve
+    defaults: { _controller: "CompeteComBundle:TournamentQuestions:approve" }
+tournamentquestions_approveupdate:
+    pattern: /{id}/approveupdate
+    defaults: { _controller: "CompeteComBundle:TournamentQuestions:approveupdate" }    

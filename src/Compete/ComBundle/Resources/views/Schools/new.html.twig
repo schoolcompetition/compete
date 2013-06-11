@@ -1,0 +1,23 @@
+
+
+{% block body -%}
+    <h1>School Registeration</h1>
+
+    <form action="{{ path('schools_create') }}" method="post" {{ form_enctype(form) }}>
+        School info: <br><br>
+        {{ form_widget(form) }} <br><br>
+        Admin info: <br><br>
+        {{ form_widget(form1) }} <br><br>
+        <p>
+            <button type="submit">Register</button>
+        </p>
+    </form>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('schools') }}">
+            Back to the list
+        </a>
+    </li>
+</ul>
+{% endblock %}

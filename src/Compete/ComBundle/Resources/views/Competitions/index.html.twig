@@ -1,0 +1,45 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Competitions list</h1>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Stdate</th>
+                <th>Enddate</th>
+                <th>Winner</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('competitions_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{% if entity.stDate %}{{ entity.stDate|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if entity.endDate %}{{ entity.endDate|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ entity.winner }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('competitions_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('competitions_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('competitions_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+    {% endblock %}

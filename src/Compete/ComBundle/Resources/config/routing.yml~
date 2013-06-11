@@ -1,0 +1,41 @@
+
+
+compete_selectrole:
+    pattern:  /role
+    defaults: { _controller: CompeteComBundle:Default:role }
+
+compete_login:
+    pattern:  /login
+    defaults: { _controller: CompeteComBundle:Default:login }
+    
+compete_authenticate:
+    pattern:  /auth
+    defaults: { _controller: CompeteComBundle:Default:authenticate }
+
+compete_selectreg:
+    pattern:  /reg
+    defaults: { _controller: CompeteComBundle:Default:register }
+
+compete_com_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: CompeteComBundle:Default:index }
+    
+CompeteComBundle_users:
+    resource: "@CompeteComBundle/Resources/config/routing/users.yml"
+    prefix:   /users
+
+CompeteComBundle_tournamentquestions:
+    resource: "@CompeteComBundle/Resources/config/routing/tournamentquestions.yml"
+    prefix:   /tournamentquestions
+
+CompeteComBundle_schools:
+    resource: "@CompeteComBundle/Resources/config/routing/schools.yml"
+    prefix:   /schools
+
+CompeteComBundle_competitions:
+    resource: "@CompeteComBundle/Resources/config/routing/competitions.yml"
+    prefix:   /competitions
+
+CompeteComBundle_artisticcompetitions:
+    resource: "@CompeteComBundle/Resources/config/routing/artisticcompetitions.yml"
+    prefix:   /artisticcompetitions

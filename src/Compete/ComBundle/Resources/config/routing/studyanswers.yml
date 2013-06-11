@@ -1,0 +1,30 @@
+studyanswers:
+    pattern:  /
+    defaults: { _controller: "CompeteComBundle:StudyAnswers:index" }
+
+studyanswers_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "CompeteComBundle:StudyAnswers:show" }
+
+studyanswers_new:
+    pattern:  /new
+    defaults: { _controller: "CompeteComBundle:StudyAnswers:new" }
+
+studyanswers_create:
+    pattern:  /create
+    defaults: { _controller: "CompeteComBundle:StudyAnswers:create" }
+    requirements: { _method: post }
+
+studyanswers_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "CompeteComBundle:StudyAnswers:edit" }
+
+studyanswers_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "CompeteComBundle:StudyAnswers:update" }
+    requirements: { _method: post|put }
+
+studyanswers_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "CompeteComBundle:StudyAnswers:delete" }
+    requirements: { _method: post|delete }

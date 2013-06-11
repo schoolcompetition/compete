@@ -1,0 +1,20 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Post a new question</h1>
+
+    <form action="{{ path('studyquestions_create') }}" method="post" {{ form_enctype(form) }}>
+        {{ form_widget(form) }}
+        <p>
+            <button type="submit">Post</button>
+        </p>
+    </form>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('studyquestions') }}">
+            Back to the list
+        </a>
+    </li>
+</ul>
+{% endblock %}

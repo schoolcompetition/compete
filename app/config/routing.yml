@@ -1,0 +1,7 @@
+compete_com:
+    resource: "@CompeteComBundle/Resources/config/routing.yml"
+    prefix:   /
+login:
+    pattern:   /login
+    defaults:  { _controller: CompeteComBundle:Default:login }
+   

@@ -1,0 +1,30 @@
+artisticcompetitions:
+    pattern:  /
+    defaults: { _controller: "CompeteComBundle:ArtisticCompetitions:index" }
+
+artisticcompetitions_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "CompeteComBundle:ArtisticCompetitions:show" }
+
+artisticcompetitions_new:
+    pattern:  /new
+    defaults: { _controller: "CompeteComBundle:ArtisticCompetitions:new" }
+
+artisticcompetitions_create:
+    pattern:  /create
+    defaults: { _controller: "CompeteComBundle:ArtisticCompetitions:create" }
+    requirements: { _method: post }
+
+artisticcompetitions_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "CompeteComBundle:ArtisticCompetitions:edit" }
+
+artisticcompetitions_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "CompeteComBundle:ArtisticCompetitions:update" }
+    requirements: { _method: post|put }
+
+artisticcompetitions_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "CompeteComBundle:ArtisticCompetitions:delete" }
+    requirements: { _method: post|delete }

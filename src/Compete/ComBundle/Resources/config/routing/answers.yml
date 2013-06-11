@@ -1,0 +1,30 @@
+answers:
+    pattern:  /
+    defaults: { _controller: "CompeteComBundle:Answers:index" }
+
+answers_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "CompeteComBundle:Answers:show" }
+
+answers_new:
+    pattern:  /new
+    defaults: { _controller: "CompeteComBundle:Answers:new" }
+
+answers_create:
+    pattern:  /create
+    defaults: { _controller: "CompeteComBundle:Answers:create" }
+    requirements: { _method: post }
+
+answers_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "CompeteComBundle:Answers:edit" }
+
+answers_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "CompeteComBundle:Answers:update" }
+    requirements: { _method: post|put }
+
+answers_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "CompeteComBundle:Answers:delete" }
+    requirements: { _method: post|delete }

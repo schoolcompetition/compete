@@ -1,0 +1,30 @@
+competitions:
+    pattern:  /
+    defaults: { _controller: "CompeteComBundle:Competitions:index" }
+
+competitions_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "CompeteComBundle:Competitions:show" }
+
+competitions_new:
+    pattern:  /new
+    defaults: { _controller: "CompeteComBundle:Competitions:new" }
+
+competitions_create:
+    pattern:  /create
+    defaults: { _controller: "CompeteComBundle:Competitions:create" }
+    requirements: { _method: post }
+
+competitions_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "CompeteComBundle:Competitions:edit" }
+
+competitions_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "CompeteComBundle:Competitions:update" }
+    requirements: { _method: post|put }
+
+competitions_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "CompeteComBundle:Competitions:delete" }
+    requirements: { _method: post|delete }

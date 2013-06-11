@@ -1,0 +1,76 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+<h1>Registeration</h1>
+
+Register as: <br><br>
+<form action="{{url('compete_selectrole')}}" method="get">
+    <input type="radio" name="role" value="s" /> Student<br />
+    <input type="radio" name="role" value="t" /> Teacher<br />
+    <input type="radio" name="role" value="sch" /> School<br /><br>
+
+</form>
+<div id="displayData"><img src=" asset l{{('img/info-red.png')}} "/> </div>
+{% endblock %}
+{% block documentReady %}
+$("input[name='role']").click(function(){
+if ($("input[name='role']:checked").val() =="s"){
+
+    $.post(
+
+        '{{ url('users_new',{'role':'s'}) }}', 
+
+
+        function(response){
+
+        $("#displayData").html(response);      		
+     
+        return false			
+
+    });
+
+
+}
+else if($("input[name='role']:checked").val() =="t"){
+
+        $.post(
+
+        '{{ url('users_new',{'role':'t'}) }}', 
+
+
+        function(response){
+
+        $("#displayData").html(response);      		
+     
+        return false			
+
+    });
+
+}
+else if($("input[name='role']:checked").val() =="sch"){
+
+    
+        $.post(
+
+        '{{ url('schools_new') }}', 
+
+
+        function(response){
+
+        $("#displayData").html(response);      		
+     
+        return false			
+
+    });
+}
+
+});
+
+
+
+
+
+
+
+	  {% endblock documentReady %}
+

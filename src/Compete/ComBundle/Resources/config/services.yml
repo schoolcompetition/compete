@@ -1,0 +1,7 @@
+parameters:
+#    compete_com.example.class: Compete\ComBundle\Example
+
+services:
+#    compete_com.example:
+#        class: %compete_com.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

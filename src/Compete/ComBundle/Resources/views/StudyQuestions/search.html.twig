@@ -1,0 +1,35 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Search existing questions</h1>
+
+    <form id="contactForm" action="{{ path('studyquestions_result') }}" method="post">
+        
+        Search keywords: <input type="text" name="search"><br>
+        Grades: <select name="grade" id="grade">
+			<option>All Grades</option>
+		{% for grade in grades %}
+			<option value="{{grade.id}}">{{grade.name}}</option>
+		{% endfor %}
+                </select>        <br>
+        Subjects: <select name="subject" id="subject">
+                <option>All Subjects</option>
+        {% for subject in subjects %}
+                <option value="{{subject.id}}">{{subject.name}}</option>
+        {% endfor %}
+                </select><br>
+                        
+   
+        <p>
+            <button id="submit" type="submit">GO!</button>
+        </p>
+    </form>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('studyquestions') }}">
+            Back to the list
+        </a>
+    </li>
+</ul>
+{% endblock %}

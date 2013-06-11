@@ -1,0 +1,30 @@
+schools:
+    pattern:  /
+    defaults: { _controller: "CompeteComBundle:Schools:index" }
+
+schools_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "CompeteComBundle:Schools:show" }
+
+schools_new:
+    pattern:  /new
+    defaults: { _controller: "CompeteComBundle:Schools:new" }
+
+schools_create:
+    pattern:  /create
+    defaults: { _controller: "CompeteComBundle:Schools:create" }
+    requirements: { _method: post }
+
+schools_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "CompeteComBundle:Schools:edit" }
+
+schools_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "CompeteComBundle:Schools:update" }
+    requirements: { _method: post|put }
+
+schools_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "CompeteComBundle:Schools:delete" }
+    requirements: { _method: post|delete }

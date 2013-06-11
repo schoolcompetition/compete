@@ -1,0 +1,54 @@
+
+
+compete_selectrole:
+    pattern:  /role
+    defaults: { _controller: CompeteComBundle:Default:role }
+compete_login:
+    pattern:   /login
+    defaults:  { _controller: CompeteComBundle:Default:login }
+login_check:
+    pattern:   /login_check
+    
+compete_authenticate:
+    pattern:  /auth
+    defaults: { _controller: CompeteComBundle:Default:authenticate }
+
+compete_selectreg:
+    pattern:  /reg
+    defaults: { _controller: CompeteComBundle:Default:register }
+
+compete_com_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: CompeteComBundle:Default:index }
+    
+CompeteComBundle_users:
+    resource: "@CompeteComBundle/Resources/config/routing/users.yml"
+    prefix:   /users
+
+CompeteComBundle_tournamentquestions:
+    resource: "@CompeteComBundle/Resources/config/routing/tournamentquestions.yml"
+    prefix:   /tournamentquestions
+
+CompeteComBundle_schools:
+    resource: "@CompeteComBundle/Resources/config/routing/schools.yml"
+    prefix:   /schools
+
+CompeteComBundle_competitions:
+    resource: "@CompeteComBundle/Resources/config/routing/competitions.yml"
+    prefix:   /competitions
+
+CompeteComBundle_artisticcompetitions:
+    resource: "@CompeteComBundle/Resources/config/routing/artisticcompetitions.yml"
+    prefix:   /artisticcompetitions
+CompeteComBundle_answers:
+        resource: "@CompeteComBundle/Resources/config/routing/answers.yml"
+        prefix:   /answers    
+
+CompeteComBundle_studyquestions:
+    resource: "@CompeteComBundle/Resources/config/routing/studyquestions.yml"
+    prefix:   /studyquestions
+
+
+CompeteComBundle_studyanswers:
+    resource: "@CompeteComBundle/Resources/config/routing/studyanswers.yml"
+    prefix:   /studyanswers

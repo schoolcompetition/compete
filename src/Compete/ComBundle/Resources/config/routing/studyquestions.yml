@@ -1,0 +1,44 @@
+studyquestions:
+    pattern:  /
+    defaults: { _controller: "CompeteComBundle:StudyQuestions:index" }
+
+studyquestions_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "CompeteComBundle:StudyQuestions:show" }
+
+studyquestions_new:
+    pattern:  /new
+    defaults: { _controller: "CompeteComBundle:StudyQuestions:new" }
+    
+studyquestions_newSearch:
+    pattern:  /news
+    defaults: { _controller: "CompeteComBundle:StudyQuestions:newSearch" }
+    
+studyquestions_search:
+    pattern:  /search
+    defaults: { _controller: "CompeteComBundle:Schools:search" }
+    requirements: { _method: post }
+    
+studyquestions_result:
+    pattern:  /result
+    defaults: { _controller: "CompeteComBundle:StudyQuestions:result" }
+    requirements: { _method: post }
+
+studyquestions_create:
+    pattern:  /create
+    defaults: { _controller: "CompeteComBundle:StudyQuestions:create" }
+    requirements: { _method: post }
+
+studyquestions_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "CompeteComBundle:StudyQuestions:edit" }
+
+studyquestions_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "CompeteComBundle:StudyQuestions:update" }
+    requirements: { _method: post|put }
+
+studyquestions_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "CompeteComBundle:StudyQuestions:delete" }
+    requirements: { _method: post|delete }

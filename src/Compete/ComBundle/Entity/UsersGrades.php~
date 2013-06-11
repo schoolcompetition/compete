@@ -1,0 +1,45 @@
+<?php
+
+namespace Compete\ComBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * UsersGrades
+ *
+ * @ORM\Table(name="users_grades")
+ * @ORM\Entity
+ */
+class UsersGrades
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var \Users
+     *
+     * @ORM\ManyToOne(targetEntity="Users")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="user_id", referencedColumnName="id")
+     * })
+     */
+    private $user;
+
+    /**
+     * @var \Grades
+     *
+     * @ORM\ManyToOne(targetEntity="Grades")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="grade_id", referencedColumnName="id")
+     * })
+     */
+    private $grade;
+
+
+}
